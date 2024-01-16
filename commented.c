@@ -3,8 +3,7 @@
 #define s a[1] // define s as the first argument
 main(int _, char **a) // main function
 {
-    int t[30000] = {0}; // initialize array of 30000 ints
-    int *p = t; // initialize p as a pointer to the first element of t
+    int t[30000] = {0},*p = t; // initialize p as a pointer to the first element of t (the tape)
     while (*s) { // iterate over s
         switch (*s) { // switch on the current character
             c '>' : 
@@ -20,7 +19,7 @@ main(int _, char **a) // main function
                 --*p; // decrement the value pointed to by p
                 b;
             c '.' : 
-                printf("%c", *p); // print the value pointed to by p
+                putchar(*p); // print the value pointed to by p
                 b;
             c ',' : 
                 *p = getchar(); // set the value pointed to by p to the next character from stdin
