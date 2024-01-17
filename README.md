@@ -1,5 +1,5 @@
 # minifk
-## A Brainf*ck interpreter with a source code of ~339 chars
+## A Brainf*ck interpreter with a source code of ~313 chars
 - written in C89 compliant (sort of!) code
 - supports all 8 instructions of Brainf*ck (`><+-.,[]`)
 
