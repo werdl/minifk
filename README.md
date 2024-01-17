@@ -1,5 +1,5 @@
 # minifk
-## A Brainf*ck interpreter with a source code of ~313 chars
+## A Brainf*ck interpreter with a source code of 284 chars
 - written in C89 compliant (sort of!) code
 - supports all 8 instructions of Brainf*ck (`><+-.,[]`)
 
@@ -17,6 +17,7 @@ make build
 ./minifk "$(cat my_bf_program.bf)"
 ```
 - Segfault? There is an error. Want to know where? Clearly you are using the wrong language!
+- It mainly works, for simple programs at least!
 
 ## File structure
 - `obf.c` - the obfuscated code
