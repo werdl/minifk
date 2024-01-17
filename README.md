@@ -1,5 +1,5 @@
 # minifk
-## A Brainf*ck interpreter with a source code of 352 chars (at last count)
+## A Brainf*ck interpreter with a source code of ~339 chars
 - written in C89 compliant (sort of!) code
 - supports all 8 instructions of Brainf*ck (`><+-.,[]`)
 
@@ -13,7 +13,7 @@ make build
 
 ## Usage
 ```bash
-./minifk "$(cat examples/hello.bf)" # must use this rather than piping as Brainf*ck programs contain shell-problematic chars
+./minifk "$(cat examples/hello.bf)" # must use this rather than piping as Brainf*ck programs contain shell-problematic chars 
 ./minifk "$(cat my_bf_program.bf)"
 ```
 - Segfault? There is an error. Want to know where? Clearly you are using the wrong language!

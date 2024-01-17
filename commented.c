@@ -1,7 +1,7 @@
-#define b break; // define b as break, so we can use it in the switch statement
+#define b break // define b as break, so we can use it in the switch statement
 #define c case // define c as case, so we can use it in the switch statement
 #define s a[1] // define s as the first argument
-main(int _, char **a) // main function
+main(int l, char **a) // main function
 {
     int t[30000] = {0},*p = t; // initialize p as a pointer to the first element of t (the tape)
     while (*s) { // iterate over s
@@ -26,13 +26,13 @@ main(int _, char **a) // main function
                 b;
             c '[' : 
                 if (!*p) { // if the value pointed to by p is 0
-                    int l = 1; // initialize l to 1
-                    while (l > 0) { // while l is greater than 0
+                    /* int l = 1; */ // initialize l to 1 (we can actually skip this)
+                    while (l) { // while l is greater than 0
                         s++; // increment s
-                        if (*s == ']') { // if the current character is ]
+                        if (*s == 93) { // if the current character is ] (we use ASCII values to skip a character)
                             l--; // decrement l
                         }
-                        else if (*s == '[') { // if the current character is [
+                        else if (*s == 91) { // if the current character is [
                             l++; // increment l
                         }
                     }
@@ -40,13 +40,13 @@ main(int _, char **a) // main function
                 b;
             c ']' : 
                 if (*p) { // if the value pointed to by p is not 0
-                    int l = 1;
-                    while (l > 0) { // while l is greater than 0
+                    l = 1;
+                    while (l) { // while l is greater than 0
                         s--; // decrement s
-                        if (*s == '[') { // if the current character is [
+                        if (*s == 91) { // if the current character is [
                             l--; // decrement l
                         }
-                        else if (*s == ']') { // if the current character is ]
+                        else if (*s == 93) { // if the current character is ]
                             l++; // increment l
                         }
                     }
